@@ -1,0 +1,29 @@
+$black: #000000;
+$font_family: Roboto,
+Helvetica,
+sans-serif;
+$background_black: hsl(0, 0%, 91%);
+$background_orange: #ddfffbc9;
+main {
+    font-family: $font_family;
+    font-size: 100%;
+}
+
+h2 {
+    font-size: 170%;
+    color: $black;
+    margin: 10px;
+}
+
+.vertical-center {
+    min-height: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: $background_orange;
+}
+
+.card {
+    border-radius: 20px;
+    margin: 50px;
+}

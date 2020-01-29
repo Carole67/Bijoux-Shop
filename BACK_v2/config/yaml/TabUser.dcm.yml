@@ -1,0 +1,81 @@
+TabUser:
+    type: entity
+    table: tab_user
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        firstname:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        lastname:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        gender:
+            type: string
+            nullable: false
+            length: 1
+            options:
+                fixed: false
+        login:
+            type: string
+            nullable: false
+            length: 10
+            options:
+                fixed: false
+        pwd:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        address:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        zipCode:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: zip_code
+        city:
+            type: string
+            nullable: false
+            length: 30
+            options:
+                fixed: false
+        country:
+            type: string
+            nullable: false
+            length: 30
+            options:
+                fixed: false
+        phoneNumber:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: phone_number
+        emailAddress:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+            column: email_address
+    lifecycleCallbacks: {  }

@@ -1,0 +1,42 @@
+TabProductDetails:
+    type: entity
+    table: tab_product_details
+    id:
+        id:
+            associationKey: true
+    fields:
+        reference:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+        weight:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+        material:
+            type: string
+            nullable: false
+            length: 30
+            options:
+                fixed: false
+        gender:
+            type: string
+            nullable: false
+            length: 10
+            options:
+                fixed: false
+    oneToOne:
+        id:
+            targetEntity: TabProduct
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

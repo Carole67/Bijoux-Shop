@@ -1,0 +1,41 @@
+<main>
+    <div class="jumbotron vertical-center">
+        <div class="container">
+            <div class="card">
+                <!--Titre-->
+                <h2 class="text-center font-weight-bold">Authentification</h2>
+                <div class="card-body">
+                    <!--Formulaire-->
+                    <form id="form_client" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group row">
+                            <div class="col-sm">
+                                <label for="login">Login</label>
+                                <input class="form-control" type="text" id="login" formControlName="username" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                                <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                                    <div *ngIf="f.username.errors.required">Login requis</div>
+                                    <div *ngIf="f.username.errors.pattern">Login invalide</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm">
+                                <label for="pwd">Mot de passe</label>
+                                <input class="form-control" type="password" formControlName="password" id="pwd" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                    <div *ngIf="f.password.errors.required">Mot de passe requis</div>
+                                    <div *ngIf="f.password.errors.minlength">Doit contenir au min. 8 caractères : majuscules, minuscules, caractères spéciaux</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="alert alert-danger" *ngIf="error">
+                            <strong>Attention !</strong> Login ou mot de passe incorrect.
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-primary btn-lg" [disabled]="loading" type="submit" id="btn_submit">Go !</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

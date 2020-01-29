@@ -1,0 +1,28 @@
+$black: #000000;
+$font_family: Roboto,
+Helvetica,
+sans-serif;
+$background_orange: #f3be93c9;
+h2 {
+    font-size: 170%;
+    color: $black;
+    margin: 10px;
+}
+
+.vertical-center {
+    min-height: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: $background_orange;
+}
+
+.card {
+    border-radius: 20px;
+    margin: 50px;
+}
+
+p {
+    font-size: 120%;
+    font-weight: 600;
+}

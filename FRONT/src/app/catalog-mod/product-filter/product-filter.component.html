@@ -1,0 +1,14 @@
+<div class="form-group row">
+    <div class="col-sm">
+        <label>Filtre : </label>
+        <select class="form-control" data-style="btn-primary" [(ngModel)]="type" (change)="notifyParent()">
+                    <option value="Name">Nom</option>
+                    <option value="PriceInf">Prix inférieur</option>
+                    <option value="PriceSup">Prix supérieur</option>
+                </select>
+    </div>
+    <div class="col-sm">
+        <label>Valeur : </label>
+        <input class="form-control" type="text" [(ngModel)]="inputFilter" name="inputFilter" (input)="notifyParent()">
+    </div>
+</div>

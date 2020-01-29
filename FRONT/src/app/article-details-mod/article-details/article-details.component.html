@@ -1,0 +1,23 @@
+<div class="container">
+    <h2 class="text-center font-weight-bold">Détails du produit</h2>
+
+    <div class="row">
+
+        <div class="col-md-3">
+            <div class="card" *ngIf="productDetails | async as p" style="height:100px;">
+                <img class="card-img-top" src="{{p.id.image}}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{p.id.name}}</h5>
+
+                    <p class="card-text">{{p.id.description}}</p>
+                    <p><strong>Référence : </strong>{{p.reference}}</p>
+                    <p><strong>Poids : </strong>{{p.weight}} g</p>
+                    <p><strong>Matériel : </strong>{{p.material}}</p>
+                    <p><strong>Genre : </strong>{{p.gender}}</p>
+                    <button class="btn btn-primary" (click)="onClick(p.id)"><span class="fas fa-cart-plus"></span> Ajouter au panier</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

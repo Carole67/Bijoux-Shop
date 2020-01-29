@@ -1,0 +1,31 @@
+[{
+        "id": "0",
+        "name": "Bague",
+        "material": "Or blanc",
+        "price": "370"
+    },
+    {
+        "id": "1",
+        "name": "Pendentif avec saphir",
+        "material": "Or jaune",
+        "price": "150"
+    },
+    {
+        "id": "2",
+        "name": "Boucles d'oreille oxydes",
+        "material": "Or blanc",
+        "price": "50"
+    },
+    {
+        "id": "3",
+        "name": "Bracelet",
+        "material": "Or jaune",
+        "price": "350"
+    },
+    {
+        "id": "4",
+        "name": "Collier",
+        "material": "Or jaune",
+        "price": "450"
+    }
+]

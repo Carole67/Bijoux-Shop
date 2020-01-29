@@ -1,0 +1,22 @@
+<div class="container">
+    <h2 class="text-center font-weight-bold">Catalogue</h2>
+    <app-product-filter (notifyCategory)="updateCategory($event)" (notifyFilter)="updateFilter($event)">
+    </app-product-filter>
+    <div class="row">
+
+        <div class="col-md-3" *ngFor="let p of products | async; index as i ">
+            <div class="card" style="width: 250px;">
+                <img class="card-img-top " src="{{p.image}} " alt="Image ">
+                <div class="card-body " style="height: 300px; ">
+                    <h4 class="card-title ">{{p.name}}</h4>
+                    <p class="card-text ">{{p.description}}</p>
+                    <h5 class="card-text ">{{p.price}} €</h5>
+                </div>
+                <div class="card-footer text-center ">
+                    <button class="btn btn-primary btn-block " (click)="onClick(p) "><span class="fas fa-cart-plus "></span> Ajouter</button>
+                    <button class="btn btn-light btn-block btn-outline-dark " [routerLink]="[ 'details', p.id] "><span class="fas fa-info-circle "></span> Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
